@@ -8,23 +8,23 @@ def primos_entre_si(x, y):
 
 
 def definir_base():
-
+    """Define o valor Base"""
     base = (B-1)**2 + (B-1) * (A-B)
+
     X3 = Y3 = 0
-
     while True:
-        resultado = X3*B + Y3*A
+      # Verifica como representar BASE com A e B
+        resultado = X3*A + Y3*B
 
-        if (base > resultado):
-            Y3 = X3+1
-            X3 = 0
-        elif (base < resultado):
-            X3 = Y3+1
-
-        else:
+        if resultado == base:
             break
+        elif Y3*B > base:
+            Y3 = 0
+            X3 = X3+1
+        else:
+            Y3 = Y3+1
 
-    print(f"A proposição é verdadeira a partir de {base} centavos.")
+    print(f"\nA proposição é verdadeira a partir de {base} centavos.")
     print(f"O valor {base} centavos pode ser feito usando {X3} selo(s) de {A} centavos e {Y3} selo(s) de {B} centavos.")
 
 
@@ -77,7 +77,7 @@ def definir_passos():
         A = B
         B = aux
 
-    print(f"[III] Troque {X1} selo(s) de {A} centavos por {Y1} selo(s) de {B} centavos ou Troque {X2} selo(s) de {B} centavos por {Y2} selo(s) de {A} centavos.\n")
+    print(f"Troque {X1} selo(s) de {A} centavos por {Y1} selo(s) de {B} centavos ou Troque {X2} selo(s) de {B} centavos por {Y2} selo(s) de {A} centavos.\n")
 
 
 def ler_valores():
@@ -116,7 +116,7 @@ def ler_valores():
 while True:
 
     if ler_valores():
-        # definir_base()
+        definir_base()
         definir_passos()
     else:
         break
