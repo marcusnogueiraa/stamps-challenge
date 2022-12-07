@@ -112,6 +112,10 @@ D = 4 - 1 = 3</br>
 O número base utilizando os selos 4 e 7 é o número 18, a partir dele, você consegue representar qualquer número utilizando 4 e 7.</br>
 
 
+**2.3 Como representar valor Base**<br/>
+Para descobrir como representar o valor base, o algoritimo encontra a solução para a equação: X.A + Y.B = P(1)
+
+
 
 
 
